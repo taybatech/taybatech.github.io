@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tayba Tech SARL</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    .lang-en, .lang-fr {
+      display: inline-block;
+    }
+    .hidden {
+      display: none !important;
+    }
+    .lang-button-active {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Push content below fixed header -->
+  <div class="h-36"></div>
+
+  <!-- Contact info bar on top -->
+  <div class="bg-red-900 text-white text-sm py-1 px-4 text-center fixed top-0 w-full z-50">
+    <span class="lang-en">Email: <a href="mailto:taybatechsarl@gmail.com" class="underline hover:text-gray-300">taybatechsarl@gmail.com</a> | Phone: <a href="tel:+212600000000" class="underline hover:text-gray-300">+212 600 000 000</a></span>
+    <span class="lang-fr hidden">Email : <a href="mailto:taybatechsarl@gmail.com" class="underline hover:text-gray-300">taybatechsarl@gmail.com</a> | Téléphone : <a href="tel:+212600000000" class="underline hover:text-gray-300">+212 600 000 000</a></span>
+  </div>
+
+  <!-- Main header below contact bar -->
+  <header class="bg-red-700 text-white py-6 shadow fixed top-6 w-full z-40">
+    <div class="container mx-auto px-4 flex flex-wrap items-center justify-between">
+      <h1 class="text-2xl font-bold mb-2 md:mb-0">Tayba Tech SARL</h1>
+      <nav class="space-x-4 flex flex-wrap items-center mb-2 md:mb-0">
+        <a href="#about" class="lang-en hover:underline">About</a>
+        <a href="#services" class="lang-en hover:underline">Services</a>
+        <a href="#projects" class="lang-en hover:underline">Projects</a>
+        <a href="#about" class="lang-fr hidden hover:underline">À propos</a>
+        <a href="#services" class="lang-fr hidden hover:underline">Services</a>
+        <a href="#projects" class="lang-fr hidden hover:underline">Projets</a>
+      </nav>
+      <div class="flex space-x-2">
+        <button id="btn-en" onclick="changeLanguage('en')" class="text-white lang-button px-3 py-1 rounded hover:bg-red-600">EN</button>
+        <button id="btn-fr" onclick="changeLanguage('fr')" class="text-white lang-button px-3 py-1 rounded hover:bg-red-600">FR</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gray-100 py-20 text-center">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold mb-4 lang-en">Crafting Reliable Software Solutions</h2>
+      <p class="text-lg text-gray-600 mb-6 lang-en">We specialize in building high-quality web applications using Ruby on Rails and modern technologies.</p>
+      <div class="w-full text-center mb-6 lang-en">
+        <a href="mailto:taybatechsarl@gmail.com" class="inline-block bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700">Get in Touch</a>
+      </div>
+      <h2 class="text-4xl font-bold mb-4 lang-fr hidden">Création de solutions logicielles fiables</h2>
+      <p class="text-lg text-gray-600 mb-6 lang-fr hidden">Nous sommes spécialisés dans le développement d'applications web de haute qualité utilisant Ruby on Rails et des technologies modernes.</p>
+      <div class="w-full text-center mb-6 lang-fr hidden">
+        <a href="mailto:taybatechsarl@gmail.com" class="inline-block bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700">Contactez-nous</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h3 class="text-2xl font-semibold mb-4 lang-en">About Tayba Tech</h3>
+      <p class="text-gray-700 text-lg lang-en">Tayba Tech SARL is a Morocco-based software company providing robust and scalable web solutions. With a strong foundation in Ruby on Rails and backend engineering, we serve startups, agencies, and enterprises across Europe and beyond.</p>
+
+      <h3 class="text-2xl font-semibold mb-4 lang-fr hidden">À propos de Tayba Tech</h3>
+      <p class="text-gray-700 text-lg lang-fr hidden">Tayba Tech SARL est une société informatique basée au Maroc offrant des solutions web robustes et évolutives. Avec une solide expertise en Ruby on Rails et en ingénierie backend, nous accompagnons des startups, agences et entreprises à travers l'Europe et au-delà.</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="bg-gray-50 py-16">
+    <div class="container mx-auto px-4">
+      <h3 class="text-2xl font-semibold mb-8 text-center lang-en">Our Services</h3>
+      <h3 class="text-2xl font-semibold mb-8 text-center lang-fr hidden">Nos Services</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 shadow rounded-lg lang-en">
+          <h4 class="font-bold text-xl mb-2">Web Application Development</h4>
+          <p class="text-gray-600">Full-stack development with Ruby on Rails, Hotwire, and modern JavaScript frameworks.</p>
+        </div>
+        <div class="bg-white p-6 shadow rounded-lg lang-en">
+          <h4 class="font-bold text-xl mb-2">API Design & Integration</h4>
+          <p class="text-gray-600">RESTful & GraphQL APIs, third-party integrations, and scalable system architecture.</p>
+        </div>
+        <div class="bg-white p-6 shadow rounded-lg lang-en">
+          <h4 class="font-bold text-xl mb-2">Maintenance & Performance</h4>
+          <p class="text-gray-600">Rails upgrades, app optimization, security hardening, and long-term technical support.</p>
+        </div>
+
+        <div class="bg-white p-6 shadow rounded-lg lang-fr hidden">
+          <h4 class="font-bold text-xl mb-2">Développement d'applications web</h4>
+          <p class="text-gray-600">Développement full-stack avec Ruby on Rails, Hotwire et des frameworks JavaScript modernes.</p>
+        </div>
+        <div class="bg-white p-6 shadow rounded-lg lang-fr hidden">
+          <h4 class="font-bold text-xl mb-2">Conception et intégration d'API</h4>
+          <p class="text-gray-600">APIs RESTful & GraphQL, intégrations tierces, et architecture système évolutive.</p>
+        </div>
+        <div class="bg-white p-6 shadow rounded-lg lang-fr hidden">
+          <h4 class="font-bold text-xl mb-2">Maintenance et performance</h4>
+          <p class="text-gray-600">Mises à jour Rails, optimisation d'application, renforcement de la sécurité, et support technique à long terme.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-16">
+    <div class="container mx-auto px-4">
+      <h3 class="text-2xl font-semibold mb-8 text-center lang-en">Selected Projects</h3>
+      <h3 class="text-2xl font-semibold mb-8 text-center lang-fr hidden">Projets Sélectionnés</h3>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 shadow rounded-lg lang-en">
+          <h4 class="font-bold text-xl mb-2">SaaS Platform for Workforce Management</h4>
+          <p class="text-gray-600">Developed a robust core API and integrated billing, CRM, and HR tools. Led team coordination and deployed scalable infrastructure on AWS.</p>
+        </div>
+        <div class="bg-white p-6 shadow rounded-lg lang-en">
+          <h4 class="font-bold text-xl mb-2">Event & Venue Booking Marketplace</h4>
+          <p class="text-gray-600">Implemented new features using Rails and React. Integrated data pipelines, ML-based decision support, and improved performance monitoring.</p>
+        </div>
+        <div class="bg-white p-6 shadow rounded-lg lang-en">
+          <h4 class="font-bold text-xl mb-2">E-Commerce Migration & Optimization</h4>
+          <p class="text-gray-600">Migrated a legacy e-commerce platform to Ruby on Rails using Solidus, applying best practices from modern commerce architecture.</p>
+        </div>
+        <div class="bg-white p-6 shadow rounded-lg lang-en">
+          <h4 class="font-bold text-xl mb-2">Payment Gateway Integration for Fintech</h4>
+          <p class="text-gray-600">Built secure RESTful APIs and integrated payment processing with Mangopay, including KYC and e-wallet flows.</p>
+        </div>
+
+        <div class="bg-white p-6 shadow rounded-lg lang-fr hidden">
+          <h4 class="font-bold text-xl mb-2">Plateforme SaaS pour la gestion des effectifs</h4>
+          <p class="text-gray-600">Développement d'une API centrale robuste, intégration de facturation, CRM et outils RH. Coordination d'équipe et déploiement d'une infrastructure évolutive sur AWS.</p>
+        </div>
+        <div class="bg-white p-6 shadow rounded-lg lang-fr hidden">
+          <h4 class="font-bold text-xl mb-2">Place de marché pour réservation d'événements et lieux</h4>
+          <p class="text-gray-600">Mise en œuvre de nouvelles fonctionnalités avec Rails et React. Intégration de pipelines de données, support décisionnel basé sur ML, et amélioration de la surveillance des performances.</p>
+        </div>
+        <div class="bg-white p-6 shadow rounded-lg lang-fr hidden">
+          <h4 class="font-bold text-xl mb-2">Migration et optimisation e-commerce</h4>
+          <p class="text-gray-600">Migration d'une plateforme e-commerce legacy vers Ruby on Rails avec Solidus, appliquant les meilleures pratiques de l'architecture commerce moderne.</p>
+        </div>
+        <div class="bg-white p-6 shadow rounded-lg lang-fr hidden">
+          <h4 class="font-bold text-xl mb-2">Intégration de passerelle de paiement pour fintech</h4>
+          <p class="text-gray-600">Création d'APIs RESTful sécurisées et intégration du traitement des paiements avec Mangopay, incluant KYC et flux de portefeuille électronique.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-red-700 text-white py-6 text-center space-y-2">
+    <p>&copy; 2025 Tayba Tech SARL. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    function setLanguage(lang) {
+      const enElems = document.querySelectorAll('.lang-en');
+      const frElems = document.querySelectorAll('.lang-fr');
+
+      if (lang === 'en') {
+        enElems.forEach(el => el.classList.remove('hidden'));
+        frElems.forEach(el => el.classList.add('hidden'));
+        document.getElementById('btn-en').classList.add('lang-button-active');
+        document.getElementById('btn-fr').classList.remove('lang-button-active');
+      } else if (lang === 'fr') {
+        enElems.forEach(el => el.classList.add('hidden'));
+        frElems.forEach(el => el.classList.remove('hidden'));
+        document.getElementById('btn-en').classList.remove('lang-button-active');
+        document.getElementById('btn-fr').classList.add('lang-button-active');
+      }
+    }
+
+    function changeLanguage(lang) {
+      setLanguage(lang);
+      const url = new URL(window.location);
+      url.searchParams.set('lang', lang);
+      window.history.replaceState({}, '', url);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const lang = getQueryParam('lang');
+      if (lang === 'fr' || lang === 'en') {
+        setLanguage(lang);
+      } else {
+        setLanguage('en');
+      }
+    });
+  </script>
+</body>
+</html>
